@@ -1,0 +1,68 @@
+
+* 
+    -webkit-box-sizing: border-box
+    box-sizing: border-box
+  
+html, body
+    width: 100%
+    height: 100%
+    font-family: 'ubuntulight', Verdana, Arial, sans-serif
+    font-size: 14px
+    font-weight: normal
+    font-style: normal
+    -webkit-font-smoothing: antialiased 
+    -moz-osx-font-smoothing: grayscale 
+    position: relative
+
+
+html, body, ul, h1, h2,h4,  p 
+    margin: 0
+    padding: 0
+    list-style-type: none  
+
+input 
+    border: none  
+
+.container
+    height: 100vh
+    min-height: 650px       
+    margin: 0px auto 
+
+.content
+    width: 100%
+    display: flex
+    flex-flow: column nowrap
+    
+    
+.section
+    display: flex
+    justify-content: center 
+    width: 100%
+    height: 100vh
+    min-height: 650px
+    background-position: center center 
+    background-repeat: no-repeat
+    background-size: cover
+    
+.wrapper   
+    display: flex
+    flex-flow: column nowrap 
+    justify-content: center 
+    align-self: center         
+    width: 940px
+    height: 100vh
+    
+@mixin gagalin 
+    font-family: 'gagalinregular', sans-serif
+    font-size: 14px
+    font-style: normal
+    font-weight: normal
+    color: #ffffff
+
+@mixin lifehack 
+    font-family: 'lifehackmedium', sans-serif
+    font-size: 14px
+    font-style: normal
+    font-weight: normal
+    color: #ffffff
+

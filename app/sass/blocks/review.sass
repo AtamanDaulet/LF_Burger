@@ -1,0 +1,62 @@
+.review
+    background: #000000
+
+.review-list
+    display: flex
+    flex-wrap: wrap
+    width: 100%
+
+.review-item
+    width: 25%
+    height: 50%
+    position: relative
+
+
+.review-img
+    position: absolute
+    top: 0
+    left: 0
+    background-repeat: no-repeat
+    background-size: cover
+    width: 100%
+    height: 100%
+    filter: grayscale(100%)
+
+.review-text
+    width: 100%
+    height: 100%
+    display: flex
+    flex-flow: column nowrap
+    justify-content: space-between
+    color: #ffffff
+    padding: 20% 7%
+    opacity: 0
+    &:hover
+        opacity: 1
+
+
+.review-text__title
+    text-transform: uppercase
+    @include gagalin
+
+.review-text__content
+    line-height: 1.714
+
+.review-text__btn
+    width: 110px
+    height: 35px
+    background: #2f3234
+    color: #ffffff 
+    border: 0px
+    border-radius: 5px
+    font-family: 'ubuntumedium', sans-serif 
+    font-size: 13px
+    letter-spacing: 1.5px
+    text-transform: uppercase
+    cursor: pointer
+    &:hover
+        background: #1f2122
+
+
+    
+
