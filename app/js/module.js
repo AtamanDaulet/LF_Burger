@@ -1,1 +1,3 @@
-console.log('Привет мир');
+$("input:checkbox")
+  .not(this)
+  .prop("checked", this.checked);

@@ -33,7 +33,6 @@ input
     display: flex
     flex-flow: column nowrap
     
-    
 .section
     display: flex
     justify-content: center 
@@ -47,8 +46,7 @@ input
 .wrapper   
     display: flex
     flex-flow: column nowrap 
-    justify-content: center 
-    align-self: center         
+    justify-content: center     
     width: 940px
     height: 100vh
     
@@ -66,3 +64,15 @@ input
     font-weight: normal
     color: #ffffff
 
+@mixin h1__title
+    @include gagalin
+    font-size: 72px
+    font-style: normal
+    color: $yellow
+
+@mixin ubuntulight
+    font-family: 'ubuntulight'
+    font-size: 14px
+    font-weight: lighter
+    font-style: normal
+    color: #ffffff

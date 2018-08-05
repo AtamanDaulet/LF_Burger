@@ -1,0 +1,114 @@
+.team    
+    justify-content: flex-end
+
+.team__right    
+    display: flex
+    width: 50%
+    background: #000
+    opacity: 0.65
+    align-items: center
+
+.wrapper__relative
+    display: flex
+    flex-flow: column nowrap
+    height: 75%
+    padding-left: 15%
+
+.team__title  
+    display: flex
+    margin-bottom: 50px
+    @include h1__title    
+
+.team__accordion    
+    display: flex
+    flex-flow: column nowrap
+
+.team__trigger 
+    display: flex
+    flex-flow: column nowrap
+    padding: 15px 0px
+    #checkbox-1,
+    #checkbox-2,
+    #checkbox-3,
+    #checkbox-4 
+        display: none
+        &:checked + label 
+            .team__arrow 
+                &::before
+                    transform: translate(0px,0px) rotate(180deg)    
+
+.team__checkbox 
+    width: 80%
+    padding-left: 8%
+    color: white
+    cursor: pointer
+    @include gagalin
+    position: relative
+
+.team__arrow 
+    position: absolute
+    display: inline-block
+    width: 10px
+    height: 10px
+    left: 3px
+
+    &::before
+        position: absolute
+        content: ''
+        width: 20px
+        height: 20px
+        background: url(../../assets/img/team/triangel-down.png) no-repeat center center
+        
+
+#checkbox-1:checked ~ .team__content,
+#checkbox-2:checked ~ .team__content,
+#checkbox-3:checked ~ .team__content,
+#checkbox-4:checked ~ .team__content  
+    
+    max-height: 350px
+    transition: max-height 0.3s ease-in-out
+    
+.team__content 
+    display: flex
+    flex-flow: row nowrap
+    max-height: 0px
+    
+    overflow: hidden
+    transition: max-height 0.3s ease-in-out
+    @include ubuntulight
+    padding-top: 15px
+
+.team__content-wrap
+    width: 80%
+    background: #000000
+
+.team__ava-wrap
+    width: 105px
+    height: 105px  
+    margin-right: 20px  
+
+.team__ava
+    width: 100%
+    height: 100%
+    border-radius: 50%
+    background-position: center center
+    background-repeat: no-repeat
+    background-size: cover
+    overflow: hidden
+    //z-index: 10
+     ///* &:before
+       // content: ""
+       // position: absolute
+       // background-color: #f22424
+       // border-radius: 50%
+      //  top: 50%
+       // left: 50%
+       // transform: translate(50%, 50%)*/
+    img 
+        display: none
+    
+
+.team__content-wrap
+    width: 260px
+
+  

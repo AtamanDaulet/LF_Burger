@@ -1,0 +1,75 @@
+
+.menu__title
+    display: flex
+    justify-content: flex-end
+    min-width: 24%
+    height: 100vh
+    p 
+        @include h1__title
+        color: #ffffff
+        padding-top: 75px
+        margin-right: 52px
+        
+
+.menu__accordion
+    display: flex
+    flex-flow: row nowrap
+    justify-content: flex-end
+    align-items: center
+    width: 74%
+    height: 100vh
+
+.menu__trigger 
+    display: flex
+    flex-flow: row nowrap
+    height: 100%
+    width: 80px
+    background-position: center center
+    background-repeat: no-repeat
+    background-size: cover
+    #checkbox-1,
+    #checkbox-2,
+    #checkbox-3
+        display: none        
+
+.menu__checkbox 
+    min-width: 100%
+    min-height: 100%
+    color: white
+    cursor: pointer
+    @include gagalin
+    font-size: 40px
+    position: relative
+    span 
+        display: flex
+        min-width: 100%
+        min-height: 100%
+
+    p    
+        position: absolute
+        text-align: center
+        white-space: nowrap
+        top: 480px
+        right: -85px
+        transform: rotate(-90deg)
+
+
+
+#checkbox-1:checked ~ .menu__content,
+#checkbox-2:checked ~ .menu__content,
+#checkbox-3:checked ~ .menu__content    
+    max-width: 540px
+    transition: max-width 0.3s ease-in-out
+    
+.menu__content 
+    display: flex
+    flex-flow: row nowrap
+    max-width: 0px  
+    min-height: 100%  
+    overflow: hidden
+    transition: max-width 0.3s ease-in-out
+    @include ubuntulight
+
+
+.team__content-wrap
+    max-width: 260px
