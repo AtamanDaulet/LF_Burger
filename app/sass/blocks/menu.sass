@@ -23,53 +23,59 @@
     display: flex
     flex-flow: row nowrap
     height: 100%
-    width: 80px
-    background-position: center center
+    width: auto
+    background-position: 0px 0px
     background-repeat: no-repeat
-    background-size: cover
+    background-size: 80px 100vh
     #checkbox-1,
     #checkbox-2,
     #checkbox-3
-        display: none        
+        display: none  
+    span 
+        width: 80px     
 
 .menu__checkbox 
-    min-width: 100%
-    min-height: 100%
+    display: flex
     color: white
     cursor: pointer
     @include gagalin
     font-size: 40px
     position: relative
-    span 
-        display: flex
-        min-width: 100%
-        min-height: 100%
-
+    
     p    
         position: absolute
-        text-align: center
         white-space: nowrap
-        top: 480px
-        right: -85px
+        width: 100%
+        height: 100%
+        text-align: left
+        top: 90%
+        right: -15%
+        transform: translate(50%, 50%)
+        transform-origin: 1px 1px
         transform: rotate(-90deg)
 
-
+#checkbox-1:checked,
+#checkbox-2:checked,
+#checkbox-3:checked 
+    color: $yellow
 
 #checkbox-1:checked ~ .menu__content,
 #checkbox-2:checked ~ .menu__content,
 #checkbox-3:checked ~ .menu__content    
-    max-width: 540px
-    transition: max-width 0.3s ease-in-out
+    width: 250px
+    transition: width 0.3s ease-in-out
     
 .menu__content 
-    display: flex
-    flex-flow: row nowrap
-    max-width: 0px  
-    min-height: 100%  
+    width: 0px
+    height: 100vh       
     overflow: hidden
-    transition: max-width 0.3s ease-in-out
+    transition: width 0.3s ease-in-out
     @include ubuntulight
+    background-color: rgb(47, 50, 52)
+    opacity: 0.929
 
 
 .team__content-wrap
     max-width: 260px
+
+   
