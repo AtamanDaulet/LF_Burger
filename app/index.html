@@ -352,59 +352,159 @@
 					</li>
 				</ul>
 			</section>
-			<section class="section contacts" style="background-image: 
-			url(./assets/img/contacts/map.jpg)">
-				<div class="contacts__footer">
-					<div class="contacts__content">
-						<div class="contacts__address ">
-							<div>Санкт-Петербург, ул.Бабушкина, д.12/1, 15 </div>
-							<a href="tel:+7-812-377-13-77">+7 (812) 377-13-77</a>
-						</div>
-						<div class="contacts__social">
-							123
+			<section class="section delivery" style="background-image: 
+			url(./assets/img/delivery/delivery-bg.jpg)">
+				<div class="wrapper">
+					<div class="delivery__title">Закажите доставку</div>
+					<form class="delivery__form" action="" method="post">
+						<div class="delivery__left">
+							<div class="form__name delivery__block">
+								<label>Имя
+									<input type="text" class="delivery__name">
+								</label>
+							</div>
+							<div class="form__phone delivery__block">
+								<label>Телефон
+									<input type="text" class="delivery__phone" value="89212264923">
+								</label>
+							</div>
+							<div class="form__street delivery__block">
+								<label>Улица
+									<input type="text" class="delivery__street">
+								</label>
+							</div>
+							<div class="form__home delivery__block">
+								<label>Дом
+									<input type="text" class="delivery__home">
+								</label>
+							</div>
+							<div class="form__unit delivery__block">
+								<label>Корпус
+									<input type="text" class="delivery__unit">
+								</label>
+							</div>
+							<div class="form__apt delivery__block">
+								<label>Квартира
+									<input type="text" class="delivery__apt">
+								</label>
+							</div>
+							<div class="form__floor delivery__block">
+								<label>Этаж
+									<input type="text" class="delivery__floor">
+								</label>
+							</div>
 
 						</div>
-					</div>
+						<div class="delivery__right">
+							<div class="form__text delivery__block">
+								<label>Комментарий
+									<textarea class="delivery__text" id="" cols="30" rows="10"></textarea>
+								</label>
+							</div>
+							<div class="delivery__radio">
+								<label>Потребуется сдача
+									<input type="radio" class="delivery__radio-cash" name="payment__type" id=""> </input>
+									<span></span>
+								</label>
+								<label>Оплата по карте
+									<input type="radio" class="delivery__radio-card" name="payment__type" id=""> </input>
+									<span></span>
+								</label>
+
+							</div>
+							<div class="delivery__checkbox">
+								<label>Не перезванивать
+									<input type="checkbox" name="not-call" id=""> </input>
+									<div class="checkbox-custom "></div>
+								</label>
+
+							</div>
+							<div class="delivery__btn">
+								<button type="submit">Заказать</button>
+								<button type="reset">Очистить</button>
+							</div>
+						</div>
+					</form>
 
 				</div>
-
-
-
-			</section>
-			<section class="pagination">
-				<div class="nav">
-					<ul class="pagination-list">
-						<li class="pagination-item is-active">
-							<a href="#first-page"></a>
-						</li>
-						<li class="pagination-item">
-							<a href="#we-best"></a>
-						</li>
-						<li class="pagination-item">
-							<a href="#"></a>
-						</li>
-						<li class="pagination-item">
-							<a href="#"></a>
-						</li>
-						<li class="pagination-item">
-							<a href="#review"></a>
-						</li>
-						<li class="pagination-item">
-							<a href="#"></a>
-						</li>
-						<li class="pagination-item">
-							<a href="#"></a>
-						</li>
-						<li class="pagination-item">
-							<a href="#"></a>
-						</li>
-						<li class="pagination-item">
-							<a href="#"></a>
-						</li>
-					</ul>
-				</div>
-			</section>
 		</div>
+		</section>
+
+		<section class="section contacts" style="background-image: 
+			url(./assets/img/contacts/map.jpg)">
+			<div class="contacts__footer">
+				<div class="contacts__content">
+					<div class="contacts__address ">
+						<div>Санкт-Петербург, ул.Бабушкина, д.12/1, 15 </div>
+						<a href="tel:+7-812-377-13-77">+7 (812) 377-13-77</a>
+					</div>
+					<div class="contacts__social">
+						<a href="#">
+							<svg class="vk">
+								<use xlink:href="./sass/blocks/sprite.svg#vk" />
+								</use>
+							</svg>
+						</a>
+						<a href="#">
+							<svg class="fb">
+								<use xlink:href="./sass/blocks/sprite.svg#fb" />
+								</use>
+							</svg>
+						</a>
+						<a href="#">
+							<svg class="inst">
+								<use xlink:href="./sass/blocks/sprite.svg#inst" />
+								</use>
+							</svg>
+						</a>
+						<a href="#">
+							<svg class="twitter">
+								<use xlink:href="./sass/blocks/sprite.svg#twitter" />
+								</use>
+							</svg>
+						</a>
+					</div>
+				</div>
+
+			</div>
+
+
+
+		</section>
+		<section class="pagination">
+			<div class="nav">
+				<ul class="pagination-list">
+					<li class="pagination-item is-active">
+						<a href="#first-page"></a>
+					</li>
+					<li class="pagination-item">
+						<a href="#we-best"></a>
+					</li>
+					<li class="pagination-item">
+						<a href="#"></a>
+					</li>
+					<li class="pagination-item">
+						<a href="#"></a>
+					</li>
+					<li class="pagination-item">
+						<a href="#review"></a>
+					</li>
+					<li class="pagination-item">
+						<a href="#"></a>
+					</li>
+					<li class="pagination-item">
+						<a href="#"></a>
+					</li>
+					<li class="pagination-item">
+						<a href="#"></a>
+					</li>
+					<li class="pagination-item">
+						<a href="#"></a>
+					</li>
+				</ul>
+			</div>
+		</section>
+	</div>
 	</div>
 	<footer></footer>
 

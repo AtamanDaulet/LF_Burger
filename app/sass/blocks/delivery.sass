@@ -1,0 +1,115 @@
+.delivery
+    display: flex
+    flex-flow: column nowrap
+    justify-content: center
+    align-items: center
+
+.delivery__title
+    @include h1__title
+    align-self: center
+    margin-bottom: 50px
+
+.delivery__form
+    display: flex
+    flex-flow: row nowrap
+    height: 275px
+    color: #ffffff
+
+.delivery__left
+    width: 50%
+    height: 100%
+    display: flex
+    flex-flow: row wrap    
+    justify-content: space-between
+    align-content: flex-start
+    margin-right: 10px
+    
+
+.delivery__block
+    flex-flow: column nowrap
+    height: 75px
+    input
+        height: 35px
+        border-radius: 5px
+        margin-top: 10px
+        width: 100%
+
+.form__name, .form__phone
+   flex-basis: 48% 
+
+
+.form__street
+    flex-basis: 100% 
+
+.form__home, .form__unit, .form__apt, .form__floor
+    flex-basis: 22% 
+
+
+
+.delivery__right
+    width: 50%
+    height: 100%
+    margin-left: 10px
+
+.form__text
+    height: 153px
+ 
+.delivery__text
+    height: 110px
+    width: 100%
+    border-radius: 5px
+    margin-top: 10px
+    resize: vertical
+
+.delivery__radio
+    margin-bottom: 25px
+    & label
+        padding-left: 20px
+        cursor: pointer
+    & input                         /* Скрываем реальный чекбокс */
+        display: none
+
+.delivery__radio-card
+    margin-left: 20px
+
+
+
+
+.delivery__checkbox
+    color: #ffffff
+    & label
+        padding-left: 20px
+        cursor: pointer
+        position: relative
+    & input                         /* Скрываем реальный чекбокс */
+        display: none
+
+.checkbox-custom 
+	position: absolute  
+    left: 1px
+    top: 1px   
+	width: 15px          
+	height: 15px
+    background-color: #ffffff
+	border: 1px solid #ffffff    
+	border-radius: 2px
+
+
+
+.delivery__btn
+    button
+        height: 35px
+        width: 100px
+        border-radius: 5px
+        margin-top: 15px
+        border: 0px
+        color: #ffffff
+        cursor: pointer
+    [type="submit"]
+        background: #e45028        
+        text-transform: uppercase
+        font-weight: bold
+    [type="reset"]
+        background-color: transparent 
+        border: 0px
+        
