@@ -11,7 +11,8 @@ var gulp          = require('gulp'),
 		autoprefixer  = require('gulp-autoprefixer'),
 		notify        = require("gulp-notify"),
 		rsync         = require('gulp-rsync'),
-		sourcemaps	  = require('gulp-sourcemaps');
+		sourcemaps	  = require('gulp-sourcemaps'),
+		cssunit = require('gulp-css-unit');
 
 gulp.task('browser-sync', function() {
 	browsersync({
@@ -30,6 +31,10 @@ gulp.task('styles', function() {
 	.pipe(sourcemaps.init({loadMaps: true}))
 		.pipe(sass({ outputStyle: 'expand' }).on("error", notify.onError()))
 		// .pipe(rename({ suffix: '.min', prefix : '' }))
+		// .pipe(cssunit({
+        //     type     :    'px-to-rem',
+        //     rootSize :    16
+        // }))
 		.pipe(autoprefixer(['last 15 versions']))
 		//.pipe(cleancss( {level: { 1: { specialComments: 0 } } })) // Opt., comment out when debugging
 	.pipe(sourcemaps.write())

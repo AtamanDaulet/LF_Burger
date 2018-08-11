@@ -30,9 +30,19 @@
     height: 75px
     input
         height: 35px
+        width: 100%
         border-radius: 5px
         margin-top: 10px
-        width: 100%
+        padding: 0px 20px    
+
+.delivery__block 
+    label        
+        input:focus
+            border: 3px solid $yellow  
+              
+        textarea:focus
+            border: 3px solid $yellow
+
 
 .form__name, .form__phone
    flex-basis: 48% 
@@ -60,41 +70,84 @@
     border-radius: 5px
     margin-top: 10px
     resize: vertical
+    padding: 0px 20px  
+
+    //radio
 
 .delivery__radio
+    display: flex
+    flex-flow: row nowrap
     margin-bottom: 25px
     & label
-        padding-left: 20px
+        display: flex
+        flex-flow: row nowrap
         cursor: pointer
+        margin-right: 20px
+        position: relative
     & input                         /* Скрываем реальный чекбокс */
         display: none
+ 
+.radio__custom
+    width: 15px
+    height: 15px
+    border: 1px solid #ffffff
+    border-radius: 50%
+    background-color: #fff
+    margin-right: 10px
+    
+.mark-radio::after
+    content: ""
+    position: absolute
+    width: 8px
+    height: 8px
+    left: 3.5px
+    top: 3.5px  
+    background-color: $red
+    border-radius: 50%
+    opacity: 0
+        
+#delivery__radio-cash:not(:checked) + .mark-radio::after,  /* checked mark aspect */
+#delivery__radio-cash:checked + .mark-radio::after 
+    opacity: 1
+    transition: all .2s
 
-.delivery__radio-card
-    margin-left: 20px
 
-
-
+//  checkbox
 
 .delivery__checkbox
     color: #ffffff
     & label
-        padding-left: 20px
+        display: flex
+        flex-flow: row nowrap
         cursor: pointer
-        position: relative
+        position: relative 
     & input                         /* Скрываем реальный чекбокс */
         display: none
 
-.checkbox-custom 
-	position: absolute  
-    left: 1px
-    top: 1px   
-	width: 15px          
-	height: 15px
-    background-color: #ffffff
-	border: 1px solid #ffffff    
-	border-radius: 2px
+.checkbox__custom
+    width: 15px
+    height: 15px
+    border: 1px solid #ffffff
+    border-radius: 3px
+    background-color: #fff
+    margin-right: 10px
 
-
+.mark::after
+    content: ''
+    position: absolute
+    top: 2px
+    left: 4px
+    width: 4px
+    height: 8px
+    border-right: 3px solid $red
+    border-bottom: 3px solid $red
+    transform: rotate(45deg)
+    opacity: 0
+        
+#not-call:not(:checked) + .mark::after,  /* checked mark aspect */
+#not-call:checked + .mark::after 
+    opacity: 1
+    transition: all .2s
 
 .delivery__btn
     button

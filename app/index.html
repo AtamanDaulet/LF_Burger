@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
 	<meta charset="UTF-8">
@@ -365,7 +365,7 @@
 							</div>
 							<div class="form__phone delivery__block">
 								<label>Телефон
-									<input type="text" class="delivery__phone" value="89212264923">
+									<input type="text" class="delivery__phone" placeholder="номер телефона">
 								</label>
 							</div>
 							<div class="form__street delivery__block">
@@ -402,20 +402,26 @@
 								</label>
 							</div>
 							<div class="delivery__radio">
-								<label>Потребуется сдача
-									<input type="radio" class="delivery__radio-cash" name="payment__type" id=""> </input>
-									<span></span>
+								<label>
+									<div class="radio__custom"></div>
+									<p>Потребуется сдача</p> 
+									<input type="radio" class="delivery__radio-cash" name="payment__type" id="delivery__radio-cash"> </input>
+									<span class="mark-radio"></span>
 								</label>
-								<label>Оплата по карте
-									<input type="radio" class="delivery__radio-card" name="payment__type" id=""> </input>
-									<span></span>
+								<label>
+									<div class="radio__custom"></div>
+									<p>Оплата по карте</p> 
+									<input type="radio" class="delivery__radio-card" name="payment__type" id="delivery__radio-cash"> </input>
+									<span class="mark-radio"></span>
 								</label>
 
 							</div>
 							<div class="delivery__checkbox">
-								<label>Не перезванивать
-									<input type="checkbox" name="not-call" id=""> </input>
-									<div class="checkbox-custom "></div>
+								<label>
+									<div class="checkbox__custom "></div>
+									<p>Не перезванивать</p>
+									<input type="checkbox" name="not-call" id="not-call"> </input>
+									<span class="mark"></span>
 								</label>
 
 							</div>
