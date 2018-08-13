@@ -10,7 +10,9 @@
     width: 25%
     height: 50%
     position: relative
-
+    @include tablets
+        width: 50%
+        height: 25%
 
 .review-img
     position: absolute
@@ -18,10 +20,11 @@
     left: 0
     background-repeat: no-repeat
     background-size: cover
+    background-position: center center
     width: 100%
     height: 100%
     filter: grayscale(100%)
-
+  
 .review-text
     width: 100%
     height: 100%
@@ -33,14 +36,27 @@
     opacity: 0
     &:hover
         opacity: 1
-
+    @include tablets
+        text-align: center
+        padding: 10% 7%
+    @include phones
+    justify-content: center
 
 .review-text__title
     text-transform: uppercase
     @include gagalin
+    @include tablets
+        margin-bottom: 15px
+    @include phones
+        font-size: 24px
+        margin-bottom: 30px
 
 .review-text__content
     line-height: 1.714
+    @include tablets
+        margin-bottom: 25px
+    @include phones
+        display: none
 
 .review-text__btn
     width: 110px
@@ -56,7 +72,10 @@
     cursor: pointer
     &:hover
         background: #1f2122
-
+    @include tablets
+        margin: auto auto
+    @include phones
+        margin: 0px auto
 
     
 

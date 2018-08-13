@@ -4,7 +4,9 @@
 .we-best
     flex-flow: column nowrap 
     align-items: center
-
+    @include phones
+        height: initial
+        
 .title  
     display: flex
     justify-content: center
@@ -12,11 +14,18 @@
     font-family: 'gagalinregular', sans-serif
     font-size: 72px
     color: $dark-blue
+    @include phones
+        font-size: 50px
+        height: 45px
+        margin-bottom: 35px
+
 
 .features-list
     display: flex
     flex-flow: row nowrap
-    justify-content: space-between    
+    justify-content: space-between   
+    @include phones
+         flex-flow: column nowrap
 
 .features-item
     display: flex
@@ -24,6 +33,10 @@
     justify-content: center
     width: 300px
     height: 300px
+    @include phones
+         flex-flow: row nowrap
+         width: 100%
+         height: auto
 
 .features-item__img
     display: flex
@@ -31,12 +44,18 @@
     align-items: center
     height: 100px
     margin-bottom: 30px
+    @include phones
+        margin-bottom: 10px
+        width: 100px
+
 
 .features-item__content
     display: flex
     align-items: center
     flex-flow: column nowrap
     height: 200px
+    @include phones
+        padding-left: 40px
 
 .features-item__title
     display: flex
@@ -45,12 +64,23 @@
     font-size: 24px
     color: $dark-blue
     margin-bottom: 20px
+    @include tablets
+        font-size: 24px
+    @include phones
+        text-align: left
+        width: 100%
+        
 
 .features-item__text
     display: flex
     text-align: center
-    color: rgba(47, 50, 52, 0.8)
+    color: rgba(47, 50, 52, 0.6)
     line-height: 1.714
     font-family: 'ubuntumedium', sans-serif
     font-size: 13px
+    @include tablets
+        font-size: 14px
+    @include phones
+        text-align: left
+
  

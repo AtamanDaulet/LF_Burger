@@ -7,26 +7,40 @@
     background: #000
     opacity: 0.65
     align-items: center
+    @include tablets
+        width: 100%
+        justify-content: center
 
 .wrapper__relative
     display: flex
     flex-flow: column nowrap
     height: 75%
     padding-left: 15%
+    @include tablets
+        padding-left: 0%
+        justify-content: center
+        align-content: center
 
 .team__title  
     display: flex
     margin-bottom: 50px
-    @include h1__title    
-
+    @include h1__title   
+    @include tablets
+        justify-content: center
+        align-content: center 
+    
 .team__accordion    
     display: flex
     flex-flow: column nowrap
+    
 
 .team__trigger 
     display: flex
     flex-flow: column nowrap
     padding: 15px 0px
+    @include tablets
+        justify-content: center
+        align-content: center
     #checkbox-1,
     #checkbox-2,
     #checkbox-3,
@@ -37,6 +51,7 @@
                 &::before
                     transform: translate(0px,0px) rotate(180deg)    
 
+
 .team__checkbox 
     width: 80%
     padding-left: 8%
@@ -44,14 +59,21 @@
     cursor: pointer
     @include gagalin
     position: relative
+    @include tablets
+        font-size: 27px 
+        width: auto
+        text-align: center
+        padding: 0px
 
 .team__arrow 
     position: absolute
     display: inline-block
     width: 10px
     height: 10px
-    left: 3px
-
+    left: 3px    
+    @include tablets
+        top: 5px
+        left: 90px 
     &::before
         position: absolute
         content: ''
@@ -59,33 +81,39 @@
         height: 20px
         background: url(../../assets/img/team/triangel-down.png) no-repeat center center
         
+#checkbox-1:checked + .team__checkbox,
+#checkbox-2:checked + .team__checkbox,
+#checkbox-3:checked + .team__checkbox,
+#checkbox-4:checked + .team__checkbox
+    color: $yellow
+
 
 #checkbox-1:checked ~ .team__content,
 #checkbox-2:checked ~ .team__content,
 #checkbox-3:checked ~ .team__content,
-#checkbox-4:checked ~ .team__content  
-    
-    max-height: 350px
+#checkbox-4:checked ~ .team__content      
+    min-height: 350px
     transition: max-height 0.3s ease-in-out
+    @include tablets
+    min-height: 250px
     
 .team__content 
     display: flex
     flex-flow: row nowrap
-    max-height: 0px
-    
+    max-height: 0px    
     overflow: hidden
     transition: max-height 0.3s ease-in-out
     @include ubuntulight
     padding-top: 15px
-
-.team__content-wrap
-    width: 80%
-    background: #000000
+    @include tablets
+        flex-flow: column nowrap
+        align-items: center
 
 .team__ava-wrap
-    width: 105px
+    min-width: 105px
     height: 105px  
-    margin-right: 20px  
+    @include tablets
+        height: 100px 
 
 .team__ava
     width: 100%
@@ -94,21 +122,20 @@
     background-position: center center
     background-repeat: no-repeat
     background-size: cover
-    overflow: hidden
-    //z-index: 10
-     ///* &:before
-       // content: ""
-       // position: absolute
-       // background-color: #f22424
-       // border-radius: 50%
-      //  top: 50%
-       // left: 50%
-       // transform: translate(50%, 50%)*/
+    overflow: hidden 
     img 
         display: none
+    @include tablets
+        max-width: 105px
+        height: 105px  
     
 
 .team__content-wrap
-    width: 260px
-
-  
+    width: 90%
+    margin: 0px 20px
+    @include tablets
+        h3,p 
+            text-align: center
+    @include phones
+        font-size: 14px
+        width: 80%
