@@ -1,0 +1,224 @@
+.offer 
+    background: linear-gradient(to top, #f9b43b, #eb8e38, #f9b43b);
+
+.wrapper__row
+    flex-flow: row nowrap
+    justify-content: center
+    align-content: center
+    position: relative
+
+.offer__burger, .offer__content
+    display: flex
+    width: 460px
+    margin: 0px 10px
+
+
+//left
+.offer__burger
+    background: url('../../assets/img/offer/offer-burger.png') center center
+    background-repeat: no-repeat
+    background-size: contain  
+
+//right    
+.offer__content
+    flex-flow: column nowrap
+    justify-content: center
+
+.content__title
+    @include h1__title
+    color: #ffffff
+    margin-bottom: 20px
+
+.content__text
+    display: flex
+    font-family: 'ubuntumedium', sans-serif
+    font-size: 13px
+    line-height: 1.714
+    color: #ffffff
+
+.offer__price
+    display: flex
+    flex-flow: row nowrap
+    align-items: baseline
+    
+
+.offer__cost
+    display: flex
+    align-items: baseline
+    @include h1__title
+    color: #e35028
+    font-size: 30px
+    margin-right: 30px
+    & span
+        font-size: 72px
+        color: #e35028
+        margin-right: 10px
+
+.offer__btn
+    width: 100px
+    height: 35px
+    font-family: 'ubuntumedium', sans-serif
+    font-size: 13px
+    text-transform: uppercase
+    color: #ffffff
+    background-color: #e35028
+    border: 1px solid #e35028
+    border-radius: 3px
+    cursor: pointer
+    text-align: center
+    
+//absolute
+.arrow__prev, .ingredients, .kkal, .arrow__next
+    position: absolute
+    z-index: 20
+
+//ingredients   
+.ingredients
+    display: flex
+    flex-flow: column nowrap
+    justify-content: center
+    align-items: center
+    width: 90px
+    height: 90px
+    background-color: #f08c33
+    border: 1px solid transparent
+    border-radius: 5px
+    text-transform: uppercase
+    top: 18%
+    cursor: pointer
+    position: relative
+    &:hover ,&:active 
+        background-color: #E35028
+    &  p
+        display: flex
+        color: #ffffff
+        @include gagalin 
+        top: 60px
+        left: 20px
+
+.ingredients__burger
+    display: flex
+    width: 47px
+    height: 41px
+    overflow: hidden
+    margin-bottom: 10px
+
+.ingredients__icon
+    display: flex
+    fill: #ffffff
+    width: 47px
+    height: 41px
+
+//composition
+.ingredients__composition
+    position: absolute
+    top: 0px
+    left: 100%
+    width: 270px
+    height: 330px
+    border: 1px solid transparent
+    border-radius: 5px
+    background-color: #ffffff
+    display: none
+    
+    
+.ingredients:hover .ingredients__composition
+    display: flex
+
+.ingredients:active .ingredients__composition
+    display: flex
+
+.ingredients__beef, .ingredients__sauce
+    fill:#E35028
+    height: 35px
+
+.ingredients__buns, .ingredients__cheese
+    fill:#F9B43B
+    height: 35px
+
+.ingredients__salad, .ingredients__cucumber
+    fill:#8BC03F
+    height: 35px
+
+.composition-list
+    display: flex
+    flex-flow: column nowrap
+    justify-content: center
+    font-family: 'ubuntumedium', sans-serif
+    font-size: 14px
+    text-transform: none
+
+.composition-item
+    display: flex
+    align-items: center
+    height: 55px
+    
+.composition-icon
+    display: flex
+    width: 70px
+
+.composition__text
+    display: flex
+    justify-content: space-between
+    width: 100%
+    margin: 0px 20px
+
+
+//kkal
+.kkal
+    display: flex
+    flex-flow: column nowrap
+    justify-content: center
+    align-items: center
+    width: 90px
+    height: 90px
+    top: 65%
+    color: #ffffff
+    @include gagalin 
+    & p 
+        display: flex
+
+.kkal__img
+    display: flex
+    width: 64px
+    height: 60px
+    overflow: hidden
+
+.kkal__icon
+    height: 55px
+    fill: #ffffff
+
+.kkal__number
+    position: absolute
+    font-size: 20px
+    
+//arrow__prev
+.offer__arrow
+    position: absolute
+    width: 100vw
+    height: 100vh   
+
+.arrow__prev , .arrow__next
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 30px
+    height: 30px
+    overflow: hidden
+    cursor: pointer
+    
+.arrow__prev 
+    top: 50%
+    left: 1vw
+    transform: rotate(90deg)
+
+.arrow__prev-icon
+    fill: #ffffff
+
+.arrow__next
+    top: 50%
+    right: 1vw
+    transform: rotate(-90deg)
+
+.arrow__next-icon
+    fill: #ffffff
