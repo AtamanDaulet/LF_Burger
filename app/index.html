@@ -13,6 +13,48 @@
 <body>
 	<div class="container">
 		<div class="content">
+			<section class="overlay " id="overlay">
+				<!-- "overlay__open" -->
+				<div class="menu__overlay wrapper">
+					<div class="overlay__header">
+						<div class="overlay__logo">
+							<a href="./">
+								<img src="./assets/img/first-page/logo.png" alt="logo">
+							</a>
+						</div>
+						<div class="menu__close">
+							<svg class="menu__close-img">
+								<use xlink:href="./sass/blocks/sprite.svg#close-x"></use>
+							</svg>
+						</div>
+					</div>
+					<nav class="navigation__overlay">
+						<ul class="menu overlay__menu">
+							<li class="overlay__menu-item ">О нас
+								<a href="#"></a>
+							</li>
+							<li class="overlay__menu-item overlay-item__circle">бургеры
+								<a href="#"></a>
+							</li>
+							<li class="overlay__menu-item overlay-item__circle">Команда
+								<a href="#"></a>
+							</li>
+							<li class="overlay__menu-item overlay-item__circle">Меню
+								<a href="#"></a>
+							</li>
+							<li class="overlay__menu-item overlay-item__circle">Отзывы
+								<a href="#"></a>
+							</li>
+							<li class="overlay__menu-item overlay-item__circle">Как мы работаем
+								<a href="#"></a>
+							</li>
+							<li class="overlay__menu-item overlay-item__circle">Контакты
+								<a href="#"></a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+			</section>
 			<section class="section first-page" id="first-page" style="background-image: 
 			url(./assets/img/first-page/bg-leaves.jpg)">
 				<div class="wrapper wrapper__align-center">
@@ -37,7 +79,7 @@
 									<li class="menu-item menu-item__circle">Меню
 										<a href="#"></a>
 									</li>
-									<li class="menu-item menu-item__circle">Отвывы
+									<li class="menu-item menu-item__circle">Отзывы
 										<a href="#"></a>
 									</li>
 									<li class="menu-item menu-item__circle">Как мы работаем
@@ -49,7 +91,7 @@
 									<li class="menu-item button-order">Заказать
 										<a href="#"></a>
 									</li>
-									<li class="menu-item phones-menu">
+									<li class="menu-item hamburger__menu">
 										<a href="#">
 											<svg class="icon-menu">
 												<use xlink:href="./sass/blocks/sprite.svg#icon-menu">
@@ -77,6 +119,7 @@
 					</div>
 				</div>
 			</section>
+
 			<section class="section we-best" id="we-best" style="background-image: 
 					url(./assets/img/we-best/bg.png)">
 				<div class="wrapper">
@@ -142,6 +185,9 @@
 							</div>
 							<p>Состав</p>
 							<div class="ingredients__composition">
+								<svg class="close-x" viewbox="0 0 40 40">
+									<use xlink:href="./sass/blocks/sprite.svg#close-x"></use>
+								</svg>
 								<ul class="composition-list">
 									<li class="composition-item">
 										<div class="composition-icon">
@@ -560,7 +606,6 @@
 							</div>
 						</div>
 					</form>
-
 				</div>
 		</div>
 		</section>
@@ -636,10 +681,7 @@
 			</div>
 		</section>
 	</div>
-	</div>
 	<footer></footer>
-
-
 </body>
 <script src="./libs/jquery-3.3.1.min.js"></script>
 <script src="./js/app.min.js"></script>

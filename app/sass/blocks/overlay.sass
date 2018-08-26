@@ -1,0 +1,76 @@
+.overlay
+    position: fixed
+    width: 100vw
+    height: 0
+    top: 0
+    left: 0
+    z-index: 100
+    background-color: #2f3234
+    display: flex
+    justify-content: center
+    display: none    
+    transition:  height 20s
+
+.overlay.overlay__open
+    @include tablets
+        display: flex
+        height: 100vh
+        
+
+.overlay__header
+    display: flex
+    justify-content: space-between
+    padding-top: 20px
+
+.navigation__overlay
+    height: 100vh    
+
+.menu.overlay__menu > :first-child
+    @include tablets    
+        display: flex
+
+.menu__overlay
+    position: relative
+
+.overlay__logo
+    justify-self: flex-start      
+    cursor: pointer
+
+.menu__close
+    display: flex
+    justify-content: center
+    align-items: center
+    stroke: #c1c2c2
+    stroke-width: 4px
+    width: 45px
+    height: 75px
+    cursor: pointer
+
+.menu__close-img
+    display: flex
+    width: 40px
+    height: 40px     
+
+.overlay__menu
+    flex-flow: column nowrap
+    justify-content: center
+    color: #c1c2c2
+
+.overlay__menu-item    
+    height: 80px
+    padding-top: 35px
+    font-size: 24px
+
+.overlay-item__circle
+    position: relative
+    &::before
+        content: ""
+        width: 3px
+        height: 3px
+        border: 1px solid #c1c2c2
+        border-radius: 50%
+        background: #c1c2c2
+        position: absolute
+        top: 10%
+        left: 50%
+    

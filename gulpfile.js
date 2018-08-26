@@ -43,9 +43,9 @@ gulp.task('styles', function() {
 });
 
 gulp.task('js', function() {
-	return gulp.src([
-		'app/js/module.js', // Always at the end
-		])
+	return gulp.src(
+		'app/js/module.js'  // Always at the end
+		)
 	.pipe(sourcemaps.init({loadMaps: true}))
 		.pipe(concat('app.min.js'))
 		//.pipe(uglify()) // Mifify js (opt.)
@@ -70,8 +70,9 @@ gulp.task('rsync', function() {
 
 gulp.task('watch', ['styles', 'js', 'browser-sync'], function() {
 	gulp.watch('app/'+syntax+'/**/*.'+syntax+'', ['styles']);
-	gulp.watch(['libs/**/*.js', 'app/js/app.min.js'], ['js']);
+	gulp.watch(['libs/**/*.js', 'app/js/*.js'], ['js']);
 	gulp.watch('app/*.html', browsersync.reload)
 });
 
 gulp.task('default', ['watch']);
+

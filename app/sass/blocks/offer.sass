@@ -6,11 +6,20 @@
     justify-content: center
     align-content: center
     position: relative
+    @include tablets
+        flex-flow: column nowrap
+        justify-content: center
+        align-items: center
 
 .offer__burger, .offer__content
     display: flex
     width: 460px
     margin: 0px 10px
+    @include tablets
+        margin: 0px 
+        padding: 0px 30px
+        height: 335px
+        width: 100%
 
 
 //left
@@ -18,16 +27,31 @@
     background: url('../../assets/img/offer/offer-burger.png') center center
     background-repeat: no-repeat
     background-size: contain  
+    @include phones
+        width: 90%
+        height: 270px
+        
 
 //right    
 .offer__content
     flex-flow: column nowrap
     justify-content: center
+    @include tablets
+        align-items: center
+
 
 .content__title
     @include h1__title
     color: #ffffff
     margin-bottom: 20px
+    @include tablets 
+        margin-bottom: 50px   
+        width: 400px  
+        text-align: center   
+    @include phones
+        font-size: 50px
+        margin-bottom: 20px
+
 
 .content__text
     display: flex
@@ -35,6 +59,12 @@
     font-size: 13px
     line-height: 1.714
     color: #ffffff
+    @include tablets 
+        margin-bottom: 45px   
+        text-align: center    
+    @include phones
+        font-size: 13px
+        margin-bottom: 20px
 
 .offer__price
     display: flex
@@ -85,6 +115,12 @@
     border-radius: 5px
     text-transform: uppercase
     top: 18%
+    @include tablets 
+        top: -30%
+        left: 15%
+    @include phones
+        top: -25%
+        left: -15%
     cursor: pointer
     position: relative
     &:hover ,&:active 
@@ -120,6 +156,21 @@
     border-radius: 5px
     background-color: #ffffff
     display: none
+
+.close-x 
+    opacity: 0 
+    @include tablets 
+        position: absolute
+        height: 20px 
+        width: 20px
+        stroke:#E35028 
+        stroke-width: 5px
+        fill: transparent
+        top: 10px
+        left: 230px
+        opacity: 1
+            
+
     
     
 .ingredients:hover .ingredients__composition
@@ -144,6 +195,7 @@
     display: flex
     flex-flow: column nowrap
     justify-content: center
+    width: 85%
     font-family: 'ubuntumedium', sans-serif
     font-size: 14px
     text-transform: none
@@ -162,7 +214,7 @@
     justify-content: space-between
     width: 100%
     margin: 0px 20px
-
+    
 
 //kkal
 .kkal
@@ -173,6 +225,12 @@
     width: 90px
     height: 90px
     top: 65%
+    @include tablets 
+        top: 12%
+        left: 72%
+    @include phones
+        top: 4%
+        left: 82%
     color: #ffffff
     @include gagalin 
     & p 
