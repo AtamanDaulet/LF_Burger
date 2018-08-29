@@ -1,15 +1,38 @@
 .offer 
     background: linear-gradient(to top, #f9b43b, #eb8e38, #f9b43b);
 
-.wrapper__row
+// .wrapper__row    
+//     flex-flow: row nowrap
+//     justify-content: center
+//     align-content: center
+//     position: relative
+//     @include tablets
+//         flex-flow: column nowrap
+//         justify-content: center
+//         align-items: center
+
+.slider
+    display: flex
+    max-width: 940px
+    overflow: hidden
+    height: 100%
+
+.offer__items 
+    display: flex
     flex-flow: row nowrap
     justify-content: center
     align-content: center
     position: relative
+    will-change: right
+    transition: right 0.3s ease
     @include tablets
         flex-flow: column nowrap
         justify-content: center
         align-items: center
+
+.offer__item
+    display: flex
+    width: 100%
 
 .offer__burger, .offer__content
     display: flex

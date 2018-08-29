@@ -47,7 +47,7 @@ gulp.task('js', function() {
 		'app/js/module.js'  // Always at the end
 		)
 	.pipe(sourcemaps.init({loadMaps: true}))
-		.pipe(concat('app.min.js'))
+	.pipe(concat('app.min.js'))
 		//.pipe(uglify()) // Mifify js (opt.)
 	.pipe(sourcemaps.write())
 	.pipe(gulp.dest('app/js'))

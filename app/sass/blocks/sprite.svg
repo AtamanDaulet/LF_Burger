@@ -1092,9 +1092,7 @@
                 c0.442,0.062,0.884,0.123,1.326,0.185C11.71,30.957,11.68,30.968,11.642,30.998z"/>
         </g>
     </symbol>    
-    <symbol id="close-x">
-        <svg class="close-x" viewbox="0 0 30 30">
+    <symbol id="close-x" viewBox="0 0 40 40">
 			<path d="M 10,10 L 30,30 M 30,10 L 10,30" />
-		</svg>
     </symbol>
 </svg>

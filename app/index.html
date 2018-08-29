@@ -8,6 +8,7 @@
 	<title>Project BURGER</title>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
 	<link rel="stylesheet" href="./css/main.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.css" />
 </head>
 
 <body>
@@ -161,13 +162,13 @@
 			</section>
 			<section class="section offer">
 				<div class="offer__arrow">
-					<div class="arrow__prev">
+					<div class="arrow__prev" id="offer__left">
 						<svg class="arrow__prev-icon">
 							<use xlink:href="./sass/blocks/sprite.svg#arrow">
 							</use>
 						</svg>
 					</div>
-					<div class="arrow__next">
+					<div class="arrow__next" id="offer__right">
 						<svg class="arrow__next-icon">
 							<use xlink:href="./sass/blocks/sprite.svg#arrow">
 							</use>
@@ -175,117 +176,125 @@
 					</div>
 				</div>
 				<div class="wrapper wrapper__row">
-					<div class="offer__burger">
-						<div class="ingredients">
-							<div class="ingredients__burger">
-								<svg class="ingredients__icon">
-									<use xlink:href="./sass/blocks/sprite.svg#ingredients__icon">
-									</use>
-								</svg>
+					<div class="slider">
+						<div class="offer__items" id="offer__items">
+							<div class="offer__item">
+								<div class="offer__burger">
+									<div class="ingredients">
+										<div class="ingredients__burger">
+											<svg class="ingredients__icon">
+												<use xlink:href="./sass/blocks/sprite.svg#ingredients__icon">
+												</use>
+											</svg>
+										</div>
+										<p>Состав</p>
+										<div class="ingredients__composition">
+											<svg class="close-x" viewbox="0 0 40 40">
+												<use xlink:href="./sass/blocks/sprite.svg#close-x"></use>
+											</svg>
+											<ul class="composition-list">
+												<li class="composition-item">
+													<div class="composition-icon">
+														<svg class="ingredients__beef">
+															<use xlink:href="./sass/blocks/sprite.svg#beef">
+															</use>
+														</svg>
+													</div>
+													<div class="composition__text">
+														<div class="composition__text-left">Говядина</div>
+														<div class="composition__text-right">300 г</div>
+													</div>
+												</li>
+												<li class="composition-item">
+													<div class="composition-icon">
+														<svg class="ingredients__buns">
+															<use xlink:href="./sass/blocks/sprite.svg#buns">
+															</use>
+														</svg>
+													</div>
+													<div class="composition__text">
+														<div class="composition__text-left">Булочки</div>
+														<div class="composition__text-right">100 г</div>
+													</div>
+												</li>
+												<li class="composition-item">
+													<div class="composition-icon">
+														<svg class="ingredients__salad">
+															<use xlink:href="./sass/blocks/sprite.svg#salad">
+															</use>
+														</svg>
+													</div>
+													<div class="composition__text">
+														<div class="composition__text-left">Зелень</div>
+														<div class="composition__text-right">70 г</div>
+													</div>
+												</li>
+												<li class="composition-item">
+													<div class="composition-icon">
+														<svg class="ingredients__sauce">
+															<use xlink:href="./sass/blocks/sprite.svg#sauce">
+															</use>
+														</svg>
+													</div>
+													<div class="composition__text">
+														<div class="composition__text-left">Соус</div>
+														<div class="composition__text-right">150 г</div>
+													</div>
+												</li>
+												<li class="composition-item">
+													<div class="composition-icon">
+														<svg class="ingredients__cucumber">
+															<use xlink:href="./sass/blocks/sprite.svg#cucumber">
+															</use>
+														</svg>
+													</div>
+													<div class="composition__text">
+														<div class="composition__text-left">Овощи</div>
+														<div class="composition__text-right">200 г</div>
+													</div>
+												</li>
+												<li class="composition-item">
+													<div class="composition-icon">
+														<svg class="ingredients__cheese">
+															<use xlink:href="./sass/blocks/sprite.svg#cheese">
+															</use>
+														</svg>
+													</div>
+													<div class="composition__text">
+														<div class="composition__text-left">Сыр</div>
+														<div class="composition__text-right">80 г</div>
+													</div>
+												</li>
+											</ul>
+										</div>
+									</div>
+									<div class="kkal">
+										<div class="kkal__img">
+											<svg class="kkal__icon">
+												<use xlink:href="./sass/blocks/sprite.svg#kkal__icon">
+												</use>
+											</svg>
+										</div>
+										<div class="kkal__number">1200</div>
+										<p>ккал</p>
+									</div>
+								</div>
+								<div class="offer__content">
+									<div class="content__title">Dark BEEF Burger</div>
+									<div class="content__text">Ваш старый добрый знакомый, с рубленым бифштексом из 100% говяд Lorem ipsum dolor sit
+										amet consectetur adipisicing elit. Ipsam amet tempora laudantium. Possimus dolores facilis ex? Lorem ipsum dolor
+										sit amet consectetur adipisicing elit. Consequuntur, laborum
+									</div>
+									<div class="offer__price">
+										<div class="offer__cost">
+											<span>500</span> рублей
+										</div>
+										<button class="offer__btn" type="button">Заказать</button>
+									</div>
+								</div>
 							</div>
-							<p>Состав</p>
-							<div class="ingredients__composition">
-								<svg class="close-x" viewbox="0 0 40 40">
-									<use xlink:href="./sass/blocks/sprite.svg#close-x"></use>
-								</svg>
-								<ul class="composition-list">
-									<li class="composition-item">
-										<div class="composition-icon">
-											<svg class="ingredients__beef">
-												<use xlink:href="./sass/blocks/sprite.svg#beef">
-												</use>
-											</svg>
-										</div>
-										<div class="composition__text">
-											<div class="composition__text-left">Говядина</div>
-											<div class="composition__text-right">300 г</div>
-										</div>
-									</li>
-									<li class="composition-item">
-										<div class="composition-icon">
-											<svg class="ingredients__buns">
-												<use xlink:href="./sass/blocks/sprite.svg#buns">
-												</use>
-											</svg>
-										</div>
-										<div class="composition__text">
-											<div class="composition__text-left">Булочки</div>
-											<div class="composition__text-right">100 г</div>
-										</div>
-									</li>
-									<li class="composition-item">
-										<div class="composition-icon">
-											<svg class="ingredients__salad">
-												<use xlink:href="./sass/blocks/sprite.svg#salad">
-												</use>
-											</svg>
-										</div>
-										<div class="composition__text">
-											<div class="composition__text-left">Зелень</div>
-											<div class="composition__text-right">70 г</div>
-										</div>
-									</li>
-									<li class="composition-item">
-										<div class="composition-icon">
-											<svg class="ingredients__sauce">
-												<use xlink:href="./sass/blocks/sprite.svg#sauce">
-												</use>
-											</svg>
-										</div>
-										<div class="composition__text">
-											<div class="composition__text-left">Соус</div>
-											<div class="composition__text-right">150 г</div>
-										</div>
-									</li>
-									<li class="composition-item">
-										<div class="composition-icon">
-											<svg class="ingredients__cucumber">
-												<use xlink:href="./sass/blocks/sprite.svg#cucumber">
-												</use>
-											</svg>
-										</div>
-										<div class="composition__text">
-											<div class="composition__text-left">Овощи</div>
-											<div class="composition__text-right">200 г</div>
-										</div>
-									</li>
-									<li class="composition-item">
-										<div class="composition-icon">
-											<svg class="ingredients__cheese">
-												<use xlink:href="./sass/blocks/sprite.svg#cheese">
-												</use>
-											</svg>
-										</div>
-										<div class="composition__text">
-											<div class="composition__text-left">Сыр</div>
-											<div class="composition__text-right">80 г</div>
-										</div>
-									</li>
-								</ul>
-							</div>
-						</div>
-						<div class="kkal">
-							<div class="kkal__img">
-								<svg class="kkal__icon">
-									<use xlink:href="./sass/blocks/sprite.svg#kkal__icon">
-									</use>
-								</svg>
-							</div>
-							<div class="kkal__number">1200</div>
-							<p>ккал</p>
-						</div>
-					</div>
-					<div class="offer__content">
-						<div class="content__title">Dark BEEF Burger</div>
-						<div class="content__text">Ваш старый добрый знакомый, с рубленым бифштексом из 100% говяд Lorem ipsum dolor sit amet
-							consectetur adipisicing elit. Ipsam amet tempora laudantium. Possimus dolores facilis ex? Lorem ipsum dolor sit amet
-							consectetur adipisicing elit. Consequuntur, laborum
-						</div>
-						<div class="offer__price">
-							<div class="offer__cost">
-								<span>500</span> рублей
-							</div>
-							<button class="offer__btn" type="button">Заказать</button>
+							<div class="offer__item">SLIDE__2</div>
+							<div class="offer__item">SLIDE__3</div>
 						</div>
 					</div>
 
@@ -437,7 +446,8 @@
 								<div class="review-text__content">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда
 									не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.
 								</div>
-								<button class="review-text__btn">Подробнее</button>
+								<button class="review-text__btn " 
+								data-fancybox data-src="#popup__review">Подробнее</button>
 							</div>
 						</div>
 					</li>
@@ -449,7 +459,8 @@
 								<div class="review-text__content">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда
 									не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.
 								</div>
-								<button class="review-text__btn">Подробнее</button>
+								<button class="review-text__btn"
+								data-fancybox data-src="#popup__review">Подробнее</button>
 							</div>
 						</div>
 					</li>
@@ -461,7 +472,8 @@
 								<div class="review-text__content">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда
 									не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.
 								</div>
-								<button class="review-text__btn">Подробнее</button>
+								<button class="review-text__btn"
+								data-fancybox data-src="#popup__review">Подробнее</button>
 							</div>
 						</div>
 					</li>
@@ -473,7 +485,8 @@
 								<div class="review-text__content">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда
 									не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.
 								</div>
-								<button class="review-text__btn">Подробнее</button>
+								<button class="review-text__btn"
+								data-fancybox data-src="#popup__review">Подробнее</button>
 							</div>
 						</div>
 					</li>
@@ -485,7 +498,8 @@
 								<div class="review-text__content">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда
 									не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.
 								</div>
-								<button class="review-text__btn">Подробнее</button>
+								<button class="review-text__btn"
+								data-fancybox data-src="#popup__review">Подробнее</button>
 							</div>
 						</div>
 					</li>
@@ -497,7 +511,8 @@
 								<div class="review-text__content">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда
 									не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.
 								</div>
-								<button class="review-text__btn">Подробнее</button>
+								<button class="review-text__btn"
+								data-fancybox data-src="#popup__review">Подробнее</button>
 							</div>
 						</div>
 					</li>
@@ -509,7 +524,8 @@
 								<div class="review-text__content">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда
 									не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.
 								</div>
-								<button class="review-text__btn">Подробнее</button>
+								<button class="review-text__btn"
+								data-fancybox data-src="#popup__review">Подробнее</button>
 							</div>
 						</div>
 					</li>
@@ -521,14 +537,15 @@
 								<div class="review-text__content">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда
 									не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.
 								</div>
-								<button class="review-text__btn">Подробнее</button>
+								<button class="review-text__btn"
+								data-fancybox data-src="#popup__review">Подробнее</button>
 							</div>
 						</div>
 					</li>
 				</ul>
 			</section>
 			<section class="section delivery" style="background-image: 
-			url(./assets/img/delivery/delivery-bg.jpg)">
+				url(./assets/img/delivery/delivery-bg.jpg)">
 				<div class="wrapper">
 					<div class="delivery__title">Закажите доставку</div>
 					<form class="delivery__form" action="" method="post">
@@ -680,10 +697,35 @@
 				</ul>
 			</div>
 		</section>
+		<div class="popup__review" id="popup__review" style="display: none;">
+			<div class="popup__review-container">
+				<div class="popup__close">
+					<svg class="popup__close-img">
+						<use xlink:href="./sass/blocks/sprite.svg#close-x"></use>
+					</svg>
+				</div>
+				<div class="popup__review-content">
+					<div class="popup__review-title">
+						Константин Спилберг
+					</div>
+					<div class="popup__review-text">
+						Мысли все о них и о них, о них и о них. Нельзя устоять, 
+						невозможно забыть... Никогда не думал, что 
+						булочки могут быть такими мягкими, котлетка такой 
+						сочной, а сыр таким расплавленным.
+						Мысли все о них и о них, о них и о них. Нельзя устоять, 
+						невозможно забыть... Никогда не думал, что 
+						булочки могут быть такими мягкими, котлетка такой 
+						сочной, а сыр таким расплавленным.
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
 	<footer></footer>
 </body>
 <script src="./libs/jquery-3.3.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.js"></script>
 <script src="./js/app.min.js"></script>
 
 </html>
