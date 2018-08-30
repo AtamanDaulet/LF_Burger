@@ -39,10 +39,15 @@ menu.open();
 const left = document.querySelector("#offer__left");
 const right = document.querySelector("#offer__right");
 const items = document.querySelector("#offer__items");
+const widthWrapper = document.querySelector(".wrapper");
+const itemsArray = document.querySelectorAll(".offer__item");
+const sectionOffer = document.querySelector(".section.offer");
+let marginItem = null;
 
+
+const step = parseFloat(window.getComputedStyle(widthWrapper, null).width);
 const minRight = 0;
-const maxRight = 2820;
-const step = 940;
+const maxRight = Math.floor(step*2);
 let currentRight = 0;
 
 items.style.right = currentRight;
@@ -61,7 +66,8 @@ left.addEventListener("click", function() {
   }
 });
 
-//  fancybox //
+
+//  fancybox /
 
 let fancyboxModal = () => {
   $('.review-text__btn').fancybox({
