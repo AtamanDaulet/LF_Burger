@@ -1,5 +1,3 @@
-
-
 ////  menu__overlay  ////
 
 let menu = (function(params) {
@@ -7,48 +5,49 @@ let menu = (function(params) {
   let menuClose = document.querySelector(params.menuClose);
   let menuItems = document.querySelectorAll(params.menuItems);
   let menu = document.querySelector(params.overlay);
-  let body = document.querySelector('body');
+  let body = document.querySelector("body");
 
   let _toggleMenu = function(e) {
-    menu.classList.toggle('overlay__open');
-    body.classList.toggle('body-active-menu');    
-  }
-//debugger;
+    menu.classList.toggle("overlay__open");
+    body.classList.toggle("body-active-menu");
+  };
+  //debugger;
   let addListeners = function() {
-    menuOpen.addEventListener('click', _toggleMenu);
-    menuClose.addEventListener('click', _toggleMenu);
+    menuOpen.addEventListener("click", _toggleMenu);
+    menuClose.addEventListener("click", _toggleMenu);
     for (let index = 0; index < menuItems.length; index++) {
       const element = menuItems[index];
-      element.addEventListener('click', _toggleMenu);
-    }    
-  }
-  //console.log(menuOpen.className);
-  return{open: addListeners};
+      element.addEventListener("click", _toggleMenu);
+    }
+  };
+  return { open: addListeners };
 })({
-  overlay: '#overlay',
-  menuOpen: '.hamburger__menu',
-  menuClose: '.menu__close',
-  menuItems: '.overlay__menu-item'
+  overlay: "#overlay",
+  menuOpen: ".hamburger__menu",
+  menuClose: ".menu__close",
+  menuItems: ".overlay__menu-item"
 });
 
 menu.open();
-
 
 ////  slider ////
 
 const left = document.querySelector("#offer__left");
 const right = document.querySelector("#offer__right");
 const items = document.querySelector("#offer__items");
-const widthWrapper = document.querySelector(".wrapper");
+const widthItem = document.querySelector("#offer__slider");
 const itemsArray = document.querySelectorAll(".offer__item");
 const sectionOffer = document.querySelector(".section.offer");
 let marginItem = null;
 
-
-const step = parseFloat(window.getComputedStyle(widthWrapper, null).width);
+const step = Math.ceil(parseFloat(window.getComputedStyle(widthItem, null).width));
 const minRight = 0;
-const maxRight = Math.floor(step*2);
+const maxRight = step * 2;
 let currentRight = 0;
+
+for (let index = 0; index < itemsArray.length; index++) {
+  itemsArray[index].style.width = step + "px";
+}
 
 items.style.right = currentRight;
 
@@ -67,14 +66,14 @@ left.addEventListener("click", function() {
 });
 
 
-//  fancybox /
+//  fancybox //
 
 let fancyboxModal = () => {
-  $('.review-text__btn').fancybox({
+  $(".review-text__btn").fancybox({
     touch: true,
     smallBtn: false
   });
-  $('.popup__close').on('click', e => {
+  $(".popup__close").on("click", e => {
     e.preventDefault();
     $.fancybox.close();
   });

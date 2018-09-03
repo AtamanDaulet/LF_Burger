@@ -25,11 +25,21 @@
 
 .popup__close    
     position: absolute
-    right: 0px
-    top: -10px
+    right: -10px
+    top: -20px
     stroke: #e35028
     stroke-width: 4px
     cursor: pointer
+    width: 50px
+    height: 50px
+    text-align: center
+    padding-top: 10px
+    @include tablets 
+        display: none
+
+    // custom fancybox x
+// .fancybox-close-small
+//     color: #e35028 !important
 
 .popup__close-img
     height: 25px 
@@ -39,7 +49,14 @@
     @include tablets 
         margin-right: -40% !important
     @include phones
-        
+        margin-right: auto !important
 
 .fancybox-container
     @include phones
+        width: 100vw !important
+
+.fancybox-content
+    @include tablets 
+        vertical-align: baseline !important
+    @include phones
+        vertical-align: baseline !important
