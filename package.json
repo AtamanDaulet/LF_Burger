@@ -20,6 +20,16 @@
     "gulp-sass": "^3.1.0",
     "gulp-sourcemaps": "^2.6.4",
     "gulp-uglify": "^3.0.0",
-    "gulp-util": "^3.0.8"
-  }
+    "gulp-util": "^3.0.8",
+    "mobile-detect": "^1.4.2",
+    "normalize.css": "^8.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AtamanDaulet/LF_Burger.git"
+  },
+  "bugs": {
+    "url": "https://github.com/AtamanDaulet/LF_Burger/issues"
+  },
+  "homepage": "https://github.com/AtamanDaulet/LF_Burger#readme"
 }
