@@ -1,0 +1,208 @@
+ 
+    
+.delivery
+    display: flex
+    flex-flow: column nowrap
+    justify-content: center
+    align-items: center
+
+.wrapper
+    @include phones
+    width: 90%
+
+.delivery__title
+    display: flex
+    @include h1__title
+    align-self: center
+    margin-bottom: 50px
+    @include phones
+        text-align: center
+        font-size: 50px
+        margin-bottom: 30px
+
+.delivery__form
+    display: flex
+    flex-flow: row nowrap
+    height: 275px
+    color: #ffffff
+    @include tablets
+       flex-flow: column nowrap 
+       height: auto
+       align-items: center
+
+.delivery__left
+    width: 50%
+    height: 100%
+    display: flex
+    flex-flow: row wrap    
+    justify-content: space-between
+    align-content: flex-start
+    margin-right: 10px
+    @include tablets
+        margin-right: 0px
+    @include phones
+        width: 100%
+    
+
+.delivery__block
+    flex-flow: column nowrap
+    height: 75px
+    input
+        height: 35px
+        width: 100%
+        border-radius: 5px
+        margin-top: 10px
+        padding: 0px 20px    
+
+.delivery__block 
+    label        
+        input:focus
+            border: 3px solid $yellow  
+              
+        textarea:focus
+            border: 3px solid $yellow
+
+
+.form__name, .form__phone
+   flex-basis: 48% 
+
+
+.form__street
+    flex-basis: 100% 
+
+.form__home, .form__unit, .form__apt, .form__floor
+    flex-basis: 22% 
+
+.delivery__right
+    width: 50%
+    height: 100%
+    margin-left: 10px
+    @include tablets
+        margin-left: 0px
+    @include phones
+        width: 100%        
+
+.form__text
+    height: 153px
+ 
+.delivery__text
+    height: 110px
+    width: 100%
+    border-radius: 5px
+    margin-top: 10px
+    resize: vertical
+    padding: 0px 20px  
+
+    //radio
+
+.delivery__radio
+    display: flex
+    flex-flow: row nowrap
+    margin-bottom: 25px
+    & label
+        display: flex
+        flex-flow: row nowrap
+        cursor: pointer
+        margin-right: 20px
+        position: relative
+    & input                         /* Скрываем реальный чекбокс */
+        display: none
+    @include phones
+        justify-content: center
+ 
+.radio__custom
+    width: 15px
+    height: 15px
+    border: 1px solid #ffffff
+    border-radius: 50%
+    background-color: #fff
+    margin-right: 10px
+    
+.mark-radio::after
+    content: ""
+    position: absolute
+    width: 8px
+    height: 8px
+    top: 0.2rem
+    left: 0.2rem 
+    background-color: $red
+    border-radius: 50%
+    opacity: 0
+    @include tablets
+        top: 0.25rem
+        left: 0.2rem
+            
+#delivery__radio-cash:not(:checked) + .mark-radio::after,  /* checked mark aspect */
+#delivery__radio-cash:checked + .mark-radio::after 
+    opacity: 1
+    transition: all .2s
+
+
+//  checkbox
+
+.delivery__checkbox
+    display: flex
+    color: #ffffff
+    & label
+        display: flex
+        flex-flow: row nowrap
+        width: 50%
+        cursor: pointer
+        position: relative 
+    @include phones
+        justify-content: center
+    & input                         /* Скрываем реальный чекбокс */
+        display: none
+
+.delivery__checkbox
+    @include phones
+        
+
+.checkbox__custom
+    width: 15px
+    height: 15px
+    border: 1px solid #ffffff
+    border-radius: 3px
+    background-color: #fff
+    margin-right: 10px
+
+.mark::after
+    content: ''
+    position: absolute
+    top: 0.05rem
+    left: 0.3rem
+    width: 4px
+    height: 8px
+    border-right: 3px solid $red
+    border-bottom: 3px solid $red
+    transform: rotate(45deg)
+    opacity: 0
+    @include tablets
+        top: 0.05rem
+        left: 0.3rem
+        
+#not-call:not(:checked) + .mark::after,  /* checked mark aspect */
+#not-call:checked + .mark::after 
+    opacity: 1
+    transition: all .2s
+
+.delivery__btn
+    button
+        height: 35px
+        width: 100px
+        border-radius: 5px
+        margin-top: 15px
+        border: 0px
+        color: #ffffff
+        cursor: pointer
+    [type="submit"]
+        background: #e45028        
+        text-transform: uppercase
+        font-weight: bold
+    [type="reset"]
+        background-color: transparent 
+        border: 0px
+    @include phones
+        display: flex
+        justify-content: center
+  
